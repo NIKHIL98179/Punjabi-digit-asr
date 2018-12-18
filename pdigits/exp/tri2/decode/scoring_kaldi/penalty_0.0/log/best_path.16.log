@@ -1,0 +1,652 @@
+# lattice-scale --inv-acoustic-scale=16 "ark:gunzip -c exp/tri2/decode/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- | lattice-best-path --word-symbol-table=exp/tri2/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/tri2/graph/words.txt | local/wer_hyp_filter > exp/tri2/decode/scoring_kaldi/penalty_0.0/16.txt 
+# Started at Tue Dec 18 10:00:28 IST 2018
+#
+lattice-scale --inv-acoustic-scale=16 'ark:gunzip -c exp/tri2/decode/lat.*.gz|' ark:- 
+lattice-best-path --word-symbol-table=exp/tri2/graph/words.txt ark:- ark,t:- 
+lattice-add-penalty --word-ins-penalty=0.0 ark:- ark:- 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U001, best cost 40.7532 + 1995.81 = 2036.57 over 630 frames.
+PN00F02U001 sifar sifar naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U002, best cost 38.9064 + 1830.39 = 1869.3 over 656 frames.
+PN00F02U002 panj chaar tinn do ikk sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U003, best cost 37.2449 + 1771.39 = 1808.63 over 630 frames.
+PN00F02U003 ikk naun satt panj tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U004, best cost 39.353 + 1797.34 = 1836.69 over 629 frames.
+PN00F02U004 do naun chhe chaar do sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U005, best cost 39.261 + 1721.61 = 1760.87 over 628 frames.
+PN00F02U005 tinn naun panj do chaar naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U006, best cost 42.272 + 1816.36 = 1858.63 over 629 frames.
+PN00F02U006 chaar ikk panj naun tinn sifar chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U007, best cost 40.8003 + 1774.2 = 1815 over 630 frames.
+PN00F02U007 chhe naun do satt naun ikk athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U008, best cost 41.101 + 1780.76 = 1821.86 over 629 frames.
+PN00F02U008 athth naun sifar athth chhe tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U009, best cost 41.9265 + 1821.54 = 1863.46 over 626 frames.
+PN00F02U009 chaar sifar satt chaar athth panj ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U010, best cost 41.1651 + 1785.25 = 1826.42 over 628 frames.
+PN00F02U010 ikk satt tinn tinn athth chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U011, best cost 44.2171 + 1800.58 = 1844.79 over 630 frames.
+PN00F02U011 chaar satt do panj athth tinn chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U012, best cost 38.7376 + 1728.19 = 1766.93 over 656 frames.
+PN00F02U012 chhe athth do athth ikk chhe do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U013, best cost 39.6739 + 1698.88 = 1738.56 over 630 frames.
+PN00F02U013 do chhe ikk do tinn satt ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U014, best cost 43.8237 + 1883.5 = 1927.32 over 629 frames.
+PN00F02U014 ikk chaar chhe sifar chaar panj sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U015, best cost 43.9318 + 1873.64 = 1917.57 over 630 frames.
+PN00F02U015 sifar panj satt sifar do do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U016, best cost 41.3083 + 1809.67 = 1850.97 over 629 frames.
+PN00F02U016 tinn panj chhe satt athth sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U017, best cost 41.5656 + 1889.85 = 1931.41 over 657 frames.
+PN00F02U017 ikk tinn chaar panj panj chhe chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U018, best cost 39.3631 + 1768.89 = 1808.25 over 652 frames.
+PN00F02U018 chhe satt satt athth athth naun naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U019, best cost 41.7458 + 1773.32 = 1815.07 over 653 frames.
+PN00F02U019 naun sifar ikk ikk do ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U020, best cost 37.0981 + 1699.23 = 1736.33 over 628 frames.
+PN00F02U020 satt naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U021, best cost 47.8417 + 2027.06 = 2074.9 over 629 frames.
+PN00F02U021 sifar sifar sifar ikk do tinn chaar panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U022, best cost 41.724 + 1795.31 = 1837.03 over 656 frames.
+PN00F02U022 panj chhe satt athth naun ikk sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U023, best cost 39.6673 + 1747.44 = 1787.11 over 630 frames.
+PN00F02U023 sifar do chaar chhe athth do sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U024, best cost 42.1773 + 1858.88 = 1901.05 over 630 frames.
+PN00F02U024 sifar tinn panj satt naun tinn sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U025, best cost 42.8354 + 1848.47 = 1891.31 over 630 frames.
+PN00F02U025 sifar chaar satt chaar sifar panj athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U026, best cost 41.7728 + 1897.34 = 1939.11 over 630 frames.
+PN00F02U026 athth panj sifar chhe naun chhe sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U027, best cost 44.1891 + 1870.95 = 1915.14 over 656 frames.
+PN00F02U027 sifar satt satt sifar athth athth sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U028, best cost 40.4855 + 1846.83 = 1887.32 over 629 frames.
+PN00F02U028 sifar naun naun sifar ikk ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U029, best cost 36.9957 + 1797.23 = 1834.22 over 630 frames.
+PN00F02U029 tinn chhe ikk chaar athth ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U030, best cost 39.5731 + 1783.37 = 1822.95 over 630 frames.
+PN00F02U030 panj naun do panj chaar ikk chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U031, best cost 39.5644 + 1811.25 = 1850.81 over 630 frames.
+PN00F02U031 chhe panj ikk satt chhe do chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U032, best cost 37.5825 + 1696.17 = 1733.75 over 629 frames.
+PN00F02U032 chhe tinn satt ikk athth tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U033, best cost 38.1723 + 1755.24 = 1793.41 over 630 frames.
+PN00F02U033 athth naun chaar naun panj do ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U034, best cost 37.6746 + 1752.48 = 1790.15 over 630 frames.
+PN00F02U034 ikk naun satt do satt panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U035, best cost 38.0239 + 1766.71 = 1804.73 over 630 frames.
+PN00F02U035 tinn naun athth satt tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U036, best cost 41.4963 + 1826.64 = 1868.14 over 630 frames.
+PN00F02U036 do do athth chaar do naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U037, best cost 39.2868 + 1747.24 = 1786.52 over 655 frames.
+PN00F02U037 sifar ikk do tinn do tinn tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U038, best cost 42.4764 + 1728.96 = 1771.44 over 630 frames.
+PN00F02U038 tinn chaar tinn chaar chaar panj panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U039, best cost 40.6958 + 1774.96 = 1815.65 over 629 frames.
+PN00F02U039 panj chhe chaar panj chhe chhe satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U040, best cost 41.16 + 1664.92 = 1706.08 over 629 frames.
+PN00F02U040 satt athth chhe satt ikk do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U041, best cost 39.4556 + 1845.56 = 1885.02 over 630 frames.
+PN00F02U041 sifar naun sifar ikk do tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U042, best cost 40.3667 + 1814.45 = 1854.82 over 648 frames.
+PN00F02U042 chaar panj chhe satt athth naun athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U043, best cost 39.3075 + 1765.62 = 1804.93 over 630 frames.
+PN00F02U043 athth sifar do chaar chhe athth satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U044, best cost 39.8778 + 1742.55 = 1782.43 over 630 frames.
+PN00F02U044 satt sifar tinn panj satt naun chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U045, best cost 42.3388 + 1847.1 = 1889.44 over 630 frames.
+PN00F02U045 chhe sifar chaar satt panj sifar panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U046, best cost 41.9985 + 1724.94 = 1766.94 over 630 frames.
+PN00F02U046 panj athth chaar sifar chhe naun tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U047, best cost 42.6449 + 1775.85 = 1818.49 over 630 frames.
+PN00F02U047 tinn sifar satt do sifar athth ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U048, best cost 42.7961 + 1716.77 = 1759.57 over 630 frames.
+PN00F02U048 ikk sifar sifar ikk naun ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U049, best cost 38.1998 + 1795.15 = 1833.35 over 630 frames.
+PN00F02U049 tinn chhe ikk chaar athth do panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U050, best cost 39.7333 + 1748.26 = 1787.99 over 629 frames.
+PN00F02U050 panj naun do chhe panj ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U051, best cost 38.0185 + 1748.22 = 1786.24 over 630 frames.
+PN00F02U051 panj chaar ikk chhe tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U052, best cost 38.2922 + 1713.6 = 1751.9 over 629 frames.
+PN00F02U052 satt ikk athth tinn satt tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U053, best cost 38.0307 + 1662.4 = 1700.43 over 630 frames.
+PN00F02U053 athth naun naun chaar naun panj do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U054, best cost 40.0202 + 1793.83 = 1833.85 over 630 frames.
+PN00F02U054 do satt chhe do athth panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U055, best cost 38.8935 + 1767.98 = 1806.87 over 630 frames.
+PN00F02U055 tinn naun satt chaar do ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U056, best cost 42.3562 + 1767.98 = 1810.34 over 656 frames.
+PN00F02U056 ikk do naun sifar ikk do do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U057, best cost 40.9375 + 1674.53 = 1715.47 over 629 frames.
+PN00F02U057 do tinn do tinn tinn chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U058, best cost 41.7184 + 1783.66 = 1825.38 over 630 frames.
+PN00F02U058 tinn chaar chaar panj panj chhe chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U059, best cost 44.4082 + 1823.27 = 1867.68 over 629 frames.
+PN00F02U059 athth athth athth sifar sifar sifar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U060, best cost 39.7599 + 1773.04 = 1812.8 over 629 frames.
+PN00F02U060 athth chhe satt athth athth naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U061, best cost 38.269 + 1822.35 = 1860.62 over 630 frames.
+PN00F02U061 sifar naun naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U062, best cost 38.9417 + 1725.75 = 1764.69 over 630 frames.
+PN00F02U062 panj chaar tinn do ikk sifar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U063, best cost 36.9579 + 1709.01 = 1745.97 over 629 frames.
+PN00F02U063 athth naun satt panj tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U064, best cost 38.5381 + 1761.26 = 1799.8 over 630 frames.
+PN00F02U064 satt naun chhe chaar do sifar chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U065, best cost 39.0355 + 1696.85 = 1735.88 over 630 frames.
+PN00F02U065 chhe naun panj do panj naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U066, best cost 40.8595 + 1702.12 = 1742.98 over 630 frames.
+PN00F02U066 chaar ikk chaar naun tinn sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U067, best cost 39.0081 + 1668.89 = 1707.9 over 630 frames.
+PN00F02U067 tinn naun do do naun ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U068, best cost 42.9223 + 1863.42 = 1906.34 over 629 frames.
+PN00F02U068 ikk naun sifar sifar satt chaar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U069, best cost 36.8475 + 1784.58 = 1821.42 over 630 frames.
+PN00F02U069 sifar ikk athth chhe tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U070, best cost 38.4706 + 1798.16 = 1836.63 over 656 frames.
+PN00F02U070 athth panj ikk chhe do chhe athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U071, best cost 44.1149 + 1752.11 = 1796.22 over 630 frames.
+PN00F02U071 athth chaar panj athth tinn chaar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U072, best cost 39.8755 + 1722.64 = 1762.52 over 630 frames.
+PN00F02U072 athth do tinn satt tinn chhe ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U073, best cost 41.6378 + 1775.08 = 1816.72 over 630 frames.
+PN00F02U073 ikk panj sifar panj chhe satt do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U074, best cost 42.3261 + 1740.82 = 1783.15 over 630 frames.
+PN00F02U074 do athth ikk tinn panj panj satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U075, best cost 39.8415 + 1761.8 = 1801.64 over 630 frames.
+PN00F02U075 satt ikk do satt sifar do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U076, best cost 41.0814 + 1785.25 = 1826.33 over 629 frames.
+PN00F02U076 chaar satt athth sifar ikk do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U077, best cost 42.3402 + 1746.38 = 1788.72 over 630 frames.
+PN00F02U077 tinn tinn chaar chhe sifar chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U078, best cost 39.8166 + 1715.42 = 1755.24 over 629 frames.
+PN00F02U078 chaar panj chhe chhe satt satt athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U079, best cost 39.9982 + 1683.03 = 1723.03 over 629 frames.
+PN00F02U079 naun naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F02U080, best cost 45.8689 + 1805.73 = 1851.6 over 629 frames.
+PN00F02U080 do chhe naun ikk do chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U001, best cost 35.1694 + 1878.57 = 1913.74 over 630 frames.
+PN00F04U001 sifar sifar naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U002, best cost 33.8167 + 1742.05 = 1775.86 over 630 frames.
+PN00F04U002 panj chaar tinn do ikk sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U003, best cost 34.1578 + 1828.01 = 1862.16 over 630 frames.
+PN00F04U003 ikk naun satt panj tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U004, best cost 35.0427 + 1780.13 = 1815.17 over 629 frames.
+PN00F04U004 do naun chhe chaar do sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U005, best cost 34.0099 + 1745.17 = 1779.18 over 630 frames.
+PN00F04U005 tinn naun panj do chaar naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U006, best cost 36.261 + 1885.23 = 1921.5 over 630 frames.
+PN00F04U006 chaar ikk panj naun tinn sifar chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U007, best cost 36.7694 + 1766.71 = 1803.48 over 630 frames.
+PN00F04U007 chhe naun do satt naun ikk athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U008, best cost 36.9784 + 1777 = 1813.97 over 629 frames.
+PN00F04U008 athth naun sifar athth chhe tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U009, best cost 37.9685 + 1804.9 = 1842.86 over 630 frames.
+PN00F04U009 chaar sifar satt chaar athth panj ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U010, best cost 38.2524 + 1827.67 = 1865.92 over 630 frames.
+PN00F04U010 ikk satt tinn tinn athth chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U011, best cost 36.9876 + 1869.53 = 1906.51 over 629 frames.
+PN00F04U011 chhe satt do panj athth tinn chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U012, best cost 33.4706 + 1728.29 = 1761.76 over 630 frames.
+PN00F04U012 chhe athth do athth ikk chhe do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U013, best cost 34.5449 + 1764.99 = 1799.54 over 630 frames.
+PN00F04U013 do chhe ikk do tinn satt ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U014, best cost 38.4603 + 1786.69 = 1825.15 over 630 frames.
+PN00F04U014 ikk chaar chhe sifar chaar panj sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U015, best cost 39.2451 + 1740.27 = 1779.51 over 630 frames.
+PN00F04U015 sifar panj satt sifar do do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U016, best cost 35.9378 + 1712 = 1747.94 over 629 frames.
+PN00F04U016 tinn panj chhe satt athth sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U017, best cost 36.277 + 1752.54 = 1788.81 over 630 frames.
+PN00F04U017 ikk tinn chaar panj panj chhe chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U018, best cost 34.8062 + 1695.43 = 1730.24 over 630 frames.
+PN00F04U018 chhe satt satt athth athth naun naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U019, best cost 37.2681 + 1768.84 = 1806.11 over 630 frames.
+PN00F04U019 naun sifar ikk ikk do ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U020, best cost 34.3071 + 1671.9 = 1706.21 over 630 frames.
+PN00F04U020 satt naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U021, best cost 38.1495 + 1771.89 = 1810.04 over 630 frames.
+PN00F04U021 sifar sifar ikk do tinn chaar panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U022, best cost 37.611 + 1800.94 = 1838.55 over 630 frames.
+PN00F04U022 panj chhe satt athth naun ikk sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U023, best cost 35.8636 + 1718.12 = 1753.99 over 629 frames.
+PN00F04U023 sifar do chaar chhe athth do sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U024, best cost 37.4721 + 1850.28 = 1887.75 over 630 frames.
+PN00F04U024 sifar tinn panj satt naun tinn sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U025, best cost 38.8714 + 1832.09 = 1870.96 over 630 frames.
+PN00F04U025 sifar chaar satt chaar sifar panj athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U026, best cost 38.027 + 1892.97 = 1931 over 630 frames.
+PN00F04U026 athth panj sifar chhe naun chhe sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U027, best cost 38.7327 + 1950.81 = 1989.54 over 630 frames.
+PN00F04U027 sifar satt satt sifar athth athth sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U028, best cost 35.6165 + 1761.77 = 1797.39 over 630 frames.
+PN00F04U028 sifar naun naun sifar ikk ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U029, best cost 33.1629 + 1755.39 = 1788.55 over 630 frames.
+PN00F04U029 tinn chhe ikk chaar athth ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U030, best cost 36.0652 + 1728.75 = 1764.81 over 630 frames.
+PN00F04U030 panj naun do panj chaar ikk chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U031, best cost 34.4992 + 1802.7 = 1837.2 over 629 frames.
+PN00F04U031 chhe panj ikk satt chhe do chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U032, best cost 34.9078 + 1816.32 = 1851.23 over 630 frames.
+PN00F04U032 chhe tinn satt ikk athth tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U033, best cost 33.5544 + 1651.99 = 1685.55 over 630 frames.
+PN00F04U033 athth naun chaar naun panj do ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U034, best cost 34.343 + 1692.73 = 1727.07 over 630 frames.
+PN00F04U034 ikk naun satt do satt panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U035, best cost 33.4147 + 1759.94 = 1793.36 over 630 frames.
+PN00F04U035 tinn naun athth satt tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U036, best cost 37.2031 + 1707.59 = 1744.8 over 630 frames.
+PN00F04U036 do do athth chaar do naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U037, best cost 36.9718 + 1812.39 = 1849.36 over 630 frames.
+PN00F04U037 sifar ikk do tinn do tinn tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U038, best cost 37.8229 + 1700.91 = 1738.74 over 630 frames.
+PN00F04U038 tinn chaar tinn chaar chaar panj panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U039, best cost 35.7874 + 1779.85 = 1815.63 over 630 frames.
+PN00F04U039 panj chhe chaar panj chhe chhe satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U040, best cost 37.4531 + 1732.25 = 1769.7 over 629 frames.
+PN00F04U040 satt athth chhe satt ikk do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U041, best cost 36.977 + 1801.52 = 1838.5 over 630 frames.
+PN00F04U041 sifar naun sifar ikk do tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U042, best cost 35.4003 + 1709.36 = 1744.76 over 630 frames.
+PN00F04U042 chaar panj chhe satt athth naun athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U043, best cost 35.8156 + 1749.83 = 1785.65 over 630 frames.
+PN00F04U043 athth sifar do chaar chhe athth satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U044, best cost 36.6431 + 1919.37 = 1956.02 over 630 frames.
+PN00F04U044 satt sifar tinn panj satt naun chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U045, best cost 36.4362 + 1838.72 = 1875.16 over 630 frames.
+PN00F04U045 chhe sifar chaar satt panj sifar panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U046, best cost 36.6686 + 1783.74 = 1820.41 over 630 frames.
+PN00F04U046 panj athth chaar sifar chhe naun tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U047, best cost 38.2119 + 1819.45 = 1857.66 over 630 frames.
+PN00F04U047 tinn sifar satt do sifar athth ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U048, best cost 39.4718 + 1880.95 = 1920.42 over 630 frames.
+PN00F04U048 ikk sifar sifar ikk naun ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U049, best cost 33.4101 + 1664.89 = 1698.3 over 630 frames.
+PN00F04U049 tinn chhe ikk chaar athth do panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U050, best cost 35.846 + 1758.92 = 1794.76 over 630 frames.
+PN00F04U050 panj naun do chhe panj ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U051, best cost 33.5079 + 1765.25 = 1798.76 over 630 frames.
+PN00F04U051 panj chaar ikk chhe tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U052, best cost 34.5275 + 1773.47 = 1808 over 630 frames.
+PN00F04U052 satt ikk athth tinn satt tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U053, best cost 33.1595 + 1619.63 = 1652.79 over 630 frames.
+PN00F04U053 athth naun naun chaar naun panj do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U054, best cost 34.8634 + 1665.82 = 1700.68 over 630 frames.
+PN00F04U054 do satt chhe do athth panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U055, best cost 35.3685 + 1667.57 = 1702.94 over 630 frames.
+PN00F04U055 tinn naun satt chaar do ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U056, best cost 36.2573 + 1620.5 = 1656.75 over 630 frames.
+PN00F04U056 ikk do naun sifar ikk do do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U057, best cost 36.1198 + 1671.44 = 1707.56 over 630 frames.
+PN00F04U057 do tinn do tinn tinn chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U058, best cost 36.0047 + 1635.01 = 1671.01 over 630 frames.
+PN00F04U058 tinn chaar chaar panj panj chhe chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U059, best cost 39.2666 + 1806.24 = 1845.5 over 630 frames.
+PN00F04U059 athth athth athth sifar sifar sifar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U060, best cost 35.4359 + 1693.57 = 1729 over 630 frames.
+PN00F04U060 athth chhe satt athth athth naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U061, best cost 32.7168 + 1661.12 = 1693.84 over 630 frames.
+PN00F04U061 sifar naun naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U062, best cost 33.891 + 1694.53 = 1728.42 over 629 frames.
+PN00F04U062 panj chaar tinn do ikk sifar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U063, best cost 32.7649 + 1715.65 = 1748.41 over 630 frames.
+PN00F04U063 athth naun satt panj tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U064, best cost 33.221 + 1716.24 = 1749.46 over 630 frames.
+PN00F04U064 satt naun chhe chaar do sifar chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U065, best cost 34.6769 + 1612.21 = 1646.88 over 630 frames.
+PN00F04U065 chhe naun panj do panj naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U066, best cost 35.6935 + 1724.09 = 1759.78 over 630 frames.
+PN00F04U066 chaar ikk chaar naun tinn sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U067, best cost 34.2733 + 1555.14 = 1589.41 over 630 frames.
+PN00F04U067 tinn naun do do naun ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U068, best cost 36.9361 + 1763.99 = 1800.93 over 630 frames.
+PN00F04U068 ikk naun sifar sifar satt chaar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U069, best cost 41.6876 + 1748.28 = 1789.97 over 630 frames.
+PN00F04U069 sifar ikk athth chhe tinn athth athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U070, best cost 33.6414 + 1637.2 = 1670.84 over 629 frames.
+PN00F04U070 athth panj ikk chhe do chhe athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U071, best cost 38.231 + 1757.36 = 1795.59 over 629 frames.
+PN00F04U071 athth chaar panj athth tinn chaar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U072, best cost 34.1047 + 1668.01 = 1702.12 over 630 frames.
+PN00F04U072 athth do tinn satt tinn chhe ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U073, best cost 37.496 + 1780.44 = 1817.94 over 630 frames.
+PN00F04U073 ikk panj sifar panj chhe satt do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U074, best cost 37.8241 + 1722.65 = 1760.48 over 629 frames.
+PN00F04U074 do athth ikk tinn panj panj satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U075, best cost 35.8604 + 1720.24 = 1756.1 over 630 frames.
+PN00F04U075 satt ikk do satt sifar do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U076, best cost 35.3257 + 1652.96 = 1688.29 over 630 frames.
+PN00F04U076 chaar satt athth sifar ikk do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U077, best cost 35.7711 + 1712.33 = 1748.1 over 630 frames.
+PN00F04U077 tinn tinn chaar chhe sifar chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U078, best cost 35.1132 + 1728.1 = 1763.21 over 630 frames.
+PN00F04U078 chaar panj chhe chhe satt satt athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U079, best cost 34.2863 + 1609.04 = 1643.33 over 630 frames.
+PN00F04U079 naun naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00F04U080, best cost 36.7066 + 1646.82 = 1683.52 over 630 frames.
+PN00F04U080 do chhe naun ikk do chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U001, best cost 39.5294 + 1979.87 = 2019.39 over 630 frames.
+PN00M01U001 sifar sifar naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U002, best cost 35.0125 + 1808.32 = 1843.33 over 630 frames.
+PN00M01U002 panj chaar tinn do ikk sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U003, best cost 34.7348 + 1868.11 = 1902.84 over 630 frames.
+PN00M01U003 ikk naun satt panj tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U004, best cost 34.4201 + 1741.61 = 1776.03 over 630 frames.
+PN00M01U004 do naun chhe chaar do sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U005, best cost 35.1825 + 1734.91 = 1770.09 over 630 frames.
+PN00M01U005 tinn naun panj do chaar naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U006, best cost 35.9979 + 1783.98 = 1819.98 over 630 frames.
+PN00M01U006 chaar ikk panj naun tinn sifar chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U007, best cost 36.6 + 1868.24 = 1904.84 over 629 frames.
+PN00M01U007 chhe naun do satt naun ikk athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U008, best cost 37.3749 + 1868.61 = 1905.98 over 630 frames.
+PN00M01U008 athth naun sifar athth chhe tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U009, best cost 38.3526 + 1972.04 = 2010.4 over 630 frames.
+PN00M01U009 chaar sifar satt chaar athth panj ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U010, best cost 38.9168 + 1886.93 = 1925.85 over 630 frames.
+PN00M01U010 ikk satt tinn tinn athth chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U011, best cost 41.9533 + 1774.9 = 1816.86 over 577 frames.
+PN00M01U011 chaar satt do panj athth tinn chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U012, best cost 32.6493 + 1903.48 = 1936.13 over 630 frames.
+PN00M01U012 chhe athth do athth ikk chhe do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U013, best cost 38.6081 + 1948.88 = 1987.49 over 630 frames.
+PN00M01U013 do chhe ikk do tinn satt ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U014, best cost 36.6854 + 1949.66 = 1986.34 over 630 frames.
+PN00M01U014 ikk chaar chhe sifar chaar panj sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U015, best cost 39.4665 + 1930.75 = 1970.22 over 630 frames.
+PN00M01U015 sifar panj satt sifar do do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U016, best cost 36.8017 + 1884.53 = 1921.33 over 630 frames.
+PN00M01U016 tinn panj chhe satt athth sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U017, best cost 37.5898 + 1800.52 = 1838.11 over 630 frames.
+PN00M01U017 ikk tinn chaar panj panj chhe chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U018, best cost 33.9023 + 1841.86 = 1875.76 over 630 frames.
+PN00M01U018 chhe satt satt athth athth naun naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U019, best cost 38.2868 + 1918.74 = 1957.03 over 630 frames.
+PN00M01U019 naun sifar ikk ikk do ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U020, best cost 34.5933 + 1887.89 = 1922.48 over 630 frames.
+PN00M01U020 satt naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U021, best cost 38.1618 + 1925.55 = 1963.71 over 630 frames.
+PN00M01U021 sifar sifar ikk do tinn chaar panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U022, best cost 39.4113 + 1911.84 = 1951.25 over 655 frames.
+PN00M01U022 panj chhe satt athth naun ikk sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U023, best cost 35.6303 + 1831.47 = 1867.1 over 629 frames.
+PN00M01U023 sifar do chaar chhe athth do sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U024, best cost 37.2414 + 1904.46 = 1941.7 over 630 frames.
+PN00M01U024 sifar tinn panj satt naun tinn sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U025, best cost 40.1076 + 1962.11 = 2002.22 over 630 frames.
+PN00M01U025 sifar chaar satt chaar sifar panj athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U026, best cost 38.1879 + 1877.51 = 1915.7 over 630 frames.
+PN00M01U026 athth panj sifar chhe naun chhe sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U027, best cost 40.176 + 1879.76 = 1919.94 over 630 frames.
+PN00M01U027 sifar satt satt sifar athth athth sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U028, best cost 37.1036 + 1851.39 = 1888.49 over 629 frames.
+PN00M01U028 sifar naun naun sifar ikk ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U029, best cost 34.3158 + 1881.19 = 1915.5 over 630 frames.
+PN00M01U029 tinn chhe ikk chaar athth ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U030, best cost 35.7434 + 1838.68 = 1874.43 over 630 frames.
+PN00M01U030 panj naun do panj chaar ikk chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U031, best cost 34.5537 + 1799.5 = 1834.05 over 629 frames.
+PN00M01U031 chhe panj ikk satt chhe do chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U032, best cost 37.4815 + 1841.39 = 1878.88 over 629 frames.
+PN00M01U032 chhe tinn satt ikk athth tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U033, best cost 33.1778 + 1795.35 = 1828.53 over 656 frames.
+PN00M01U033 athth naun chaar naun panj do ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U034, best cost 36.5391 + 1770.22 = 1806.76 over 630 frames.
+PN00M01U034 ikk naun satt do satt panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U035, best cost 37.3633 + 1794.95 = 1832.32 over 630 frames.
+PN00M01U035 tinn naun athth satt tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U036, best cost 38.0029 + 1815.56 = 1853.56 over 630 frames.
+PN00M01U036 do do athth chaar do naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U037, best cost 37.689 + 1836.34 = 1874.03 over 630 frames.
+PN00M01U037 sifar ikk do tinn do tinn tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U038, best cost 38.9451 + 1810 = 1848.94 over 629 frames.
+PN00M01U038 tinn chaar tinn chaar chaar panj panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U039, best cost 39.4248 + 1847.94 = 1887.36 over 630 frames.
+PN00M01U039 panj chhe chaar panj chhe chhe satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U040, best cost 38.8851 + 1854.77 = 1893.66 over 630 frames.
+PN00M01U040 satt athth chhe satt ikk do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U041, best cost 39.0806 + 1856.26 = 1895.34 over 630 frames.
+PN00M01U041 sifar naun sifar ikk do tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U042, best cost 38.6582 + 1860.6 = 1899.26 over 630 frames.
+PN00M01U042 chaar panj chhe satt athth naun athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U043, best cost 37.3644 + 1918.88 = 1956.24 over 629 frames.
+PN00M01U043 athth sifar do chaar chhe athth satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U044, best cost 39.5817 + 1972.41 = 2011.99 over 656 frames.
+PN00M01U044 satt sifar tinn panj satt naun chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U045, best cost 37.3412 + 1909.89 = 1947.23 over 630 frames.
+PN00M01U045 chhe sifar chaar satt panj sifar panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U046, best cost 38.7514 + 1862.65 = 1901.4 over 630 frames.
+PN00M01U046 panj athth chaar sifar chhe naun tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U047, best cost 42.8341 + 1952.41 = 1995.24 over 630 frames.
+PN00M01U047 tinn sifar satt do sifar athth ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U048, best cost 41.7115 + 1925.33 = 1967.04 over 630 frames.
+PN00M01U048 ikk sifar sifar ikk naun ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U049, best cost 36.5716 + 1833.31 = 1869.88 over 630 frames.
+PN00M01U049 tinn chhe ikk chaar athth do panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U050, best cost 36.2741 + 1782.39 = 1818.66 over 630 frames.
+PN00M01U050 panj naun do chhe panj ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U051, best cost 34.98 + 1865.16 = 1900.14 over 629 frames.
+PN00M01U051 panj chaar ikk chhe tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U052, best cost 37.9282 + 1927 = 1964.93 over 630 frames.
+PN00M01U052 satt ikk athth tinn satt tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U053, best cost 32.872 + 1778.1 = 1810.98 over 629 frames.
+PN00M01U053 athth naun naun chaar naun panj do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U054, best cost 35.9829 + 1878.18 = 1914.17 over 629 frames.
+PN00M01U054 do satt chhe do athth panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U055, best cost 37.0727 + 1881.41 = 1918.48 over 629 frames.
+PN00M01U055 tinn naun satt chaar do ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U056, best cost 37.0221 + 1808.84 = 1845.86 over 630 frames.
+PN00M01U056 ikk do naun sifar ikk do do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U057, best cost 40.435 + 1721.53 = 1761.96 over 630 frames.
+PN00M01U057 do tinn do tinn tinn chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U058, best cost 38.7977 + 1805.91 = 1844.71 over 656 frames.
+PN00M01U058 tinn chaar chaar panj panj chhe chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U059, best cost 41.8635 + 2026.22 = 2068.08 over 630 frames.
+PN00M01U059 athth athth athth sifar sifar sifar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U060, best cost 36.8223 + 1870.33 = 1907.16 over 630 frames.
+PN00M01U060 athth chhe satt athth athth naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U061, best cost 33.4813 + 1846.74 = 1880.22 over 630 frames.
+PN00M01U061 sifar naun naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U062, best cost 34.9738 + 1786.94 = 1821.92 over 630 frames.
+PN00M01U062 panj chaar tinn do ikk sifar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U063, best cost 33.9926 + 1792.29 = 1826.28 over 630 frames.
+PN00M01U063 athth naun satt panj tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U064, best cost 34.0609 + 1761.29 = 1795.36 over 630 frames.
+PN00M01U064 satt naun chhe chaar do sifar chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U065, best cost 34.5663 + 1666.99 = 1701.56 over 629 frames.
+PN00M01U065 chhe naun panj do panj naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U066, best cost 38.7655 + 1739.97 = 1778.73 over 630 frames.
+PN00M01U066 chaar ikk chaar naun tinn sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U067, best cost 38.0005 + 1703.55 = 1741.55 over 630 frames.
+PN00M01U067 tinn naun do do naun ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U068, best cost 39.1539 + 1875.97 = 1915.12 over 630 frames.
+PN00M01U068 ikk naun sifar sifar satt chaar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U069, best cost 43.3605 + 1864.09 = 1907.45 over 630 frames.
+PN00M01U069 sifar ikk athth chhe tinn athth athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U070, best cost 35.2506 + 1809.55 = 1844.8 over 630 frames.
+PN00M01U070 athth panj ikk chhe do chhe athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U071, best cost 40.4019 + 1830.62 = 1871.02 over 630 frames.
+PN00M01U071 athth chaar panj athth tinn chaar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U072, best cost 35.8937 + 1804.41 = 1840.31 over 630 frames.
+PN00M01U072 athth do tinn satt tinn chhe ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U073, best cost 37.7635 + 1813.89 = 1851.65 over 630 frames.
+PN00M01U073 ikk panj sifar panj chhe satt do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U074, best cost 40.2414 + 1795.91 = 1836.15 over 629 frames.
+PN00M01U074 do athth ikk tinn panj panj satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U075, best cost 40.2635 + 1863.57 = 1903.83 over 629 frames.
+PN00M01U075 satt ikk do satt sifar do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U076, best cost 39.2022 + 1813.46 = 1852.66 over 630 frames.
+PN00M01U076 chaar satt athth sifar ikk do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U077, best cost 39.3648 + 1756.71 = 1796.08 over 630 frames.
+PN00M01U077 tinn tinn chaar chhe sifar chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U078, best cost 39.4905 + 1841.62 = 1881.11 over 630 frames.
+PN00M01U078 chaar panj chhe chhe satt satt athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U079, best cost 37.6345 + 1758.96 = 1796.6 over 629 frames.
+PN00M01U079 naun naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M01U080, best cost 41.051 + 1778 = 1819.05 over 630 frames.
+PN00M01U080 do chhe naun ikk do chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U001, best cost 34.0807 + 1841.48 = 1875.56 over 629 frames.
+PN00M03U001 sifar sifar naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U002, best cost 32.2862 + 1791.35 = 1823.64 over 630 frames.
+PN00M03U002 panj chaar tinn do ikk sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U003, best cost 32.0974 + 1721.14 = 1753.23 over 630 frames.
+PN00M03U003 ikk naun satt panj tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U004, best cost 34.3566 + 1746.81 = 1781.17 over 630 frames.
+PN00M03U004 do naun chhe chaar do sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U005, best cost 35.1312 + 1724.23 = 1759.36 over 629 frames.
+PN00M03U005 tinn naun panj do chaar naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U006, best cost 34.1423 + 1729.49 = 1763.63 over 630 frames.
+PN00M03U006 chaar ikk panj naun tinn sifar chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U007, best cost 35.3716 + 1739.47 = 1774.84 over 630 frames.
+PN00M03U007 chhe naun do satt naun ikk athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U008, best cost 36.5975 + 1788.05 = 1824.65 over 630 frames.
+PN00M03U008 athth naun sifar athth chhe tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U009, best cost 36.3969 + 1781.63 = 1818.03 over 630 frames.
+PN00M03U009 chaar sifar satt chaar athth panj ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U010, best cost 37.5449 + 1758.94 = 1796.49 over 630 frames.
+PN00M03U010 ikk satt tinn tinn athth chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U011, best cost 37.8993 + 1832.22 = 1870.12 over 630 frames.
+PN00M03U011 chhe satt do panj athth tinn chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U012, best cost 33.1286 + 1692.2 = 1725.33 over 630 frames.
+PN00M03U012 chhe athth do athth ikk chhe do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U013, best cost 34.7496 + 1678.54 = 1713.29 over 630 frames.
+PN00M03U013 do chhe ikk do tinn satt ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U014, best cost 36.9018 + 1724.74 = 1761.65 over 630 frames.
+PN00M03U014 ikk chaar chhe sifar chaar panj sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U015, best cost 38.8721 + 1750.95 = 1789.82 over 630 frames.
+PN00M03U015 sifar panj satt sifar do do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U016, best cost 36.8752 + 1713.26 = 1750.13 over 630 frames.
+PN00M03U016 tinn panj chhe satt athth sifar ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U017, best cost 38.4205 + 1673.41 = 1711.83 over 630 frames.
+PN00M03U017 ikk tinn chaar panj panj chhe chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U018, best cost 34.8835 + 1675.03 = 1709.92 over 630 frames.
+PN00M03U018 chhe satt satt athth athth naun naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U019, best cost 36.2086 + 1681.84 = 1718.05 over 629 frames.
+PN00M03U019 naun sifar ikk ikk do ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U020, best cost 32.6598 + 1690.67 = 1723.33 over 630 frames.
+PN00M03U020 satt naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U021, best cost 41.2875 + 1952.9 = 1994.19 over 630 frames.
+PN00M03U021 sifar sifar ikk do tinn chaar panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U022, best cost 36.8826 + 1786.52 = 1823.4 over 630 frames.
+PN00M03U022 panj chhe satt athth naun ikk sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U023, best cost 35.6182 + 1802.22 = 1837.84 over 629 frames.
+PN00M03U023 sifar do chaar chhe athth do sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U024, best cost 36.6755 + 1766.3 = 1802.97 over 630 frames.
+PN00M03U024 sifar tinn panj satt naun tinn sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U025, best cost 38.843 + 1764.7 = 1803.54 over 630 frames.
+PN00M03U025 sifar chaar satt chaar sifar panj athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U026, best cost 37.1127 + 1798.86 = 1835.98 over 629 frames.
+PN00M03U026 athth panj sifar chhe naun chhe sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U027, best cost 38.5372 + 1818.58 = 1857.12 over 629 frames.
+PN00M03U027 sifar satt satt sifar athth athth sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U028, best cost 35.8287 + 1714.95 = 1750.78 over 630 frames.
+PN00M03U028 sifar naun naun sifar ikk ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U029, best cost 33.1936 + 1675.58 = 1708.78 over 630 frames.
+PN00M03U029 tinn chhe ikk chaar athth ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U030, best cost 34.0347 + 1667.3 = 1701.34 over 630 frames.
+PN00M03U030 panj naun do panj chaar ikk chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U031, best cost 34.1354 + 1675.06 = 1709.19 over 629 frames.
+PN00M03U031 chhe panj ikk satt chhe do chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U032, best cost 35.2412 + 1786.82 = 1822.06 over 629 frames.
+PN00M03U032 chhe tinn satt ikk athth tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U033, best cost 33.1653 + 1726.07 = 1759.23 over 630 frames.
+PN00M03U033 athth naun chaar naun panj do ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U034, best cost 34.0067 + 1656.54 = 1690.55 over 630 frames.
+PN00M03U034 ikk naun satt do satt panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U035, best cost 32.8134 + 1637.34 = 1670.16 over 630 frames.
+PN00M03U035 tinn naun athth satt tinn ikk do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U036, best cost 36.9158 + 1736.89 = 1773.81 over 629 frames.
+PN00M03U036 do do athth chaar do naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U037, best cost 36.772 + 1742.92 = 1779.69 over 629 frames.
+PN00M03U037 sifar ikk do tinn do tinn tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U038, best cost 38.4423 + 2003.27 = 2041.72 over 630 frames.
+PN00M03U038 tinn chaar tinn chaar chaar panj panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U039, best cost 35.6117 + 1700.41 = 1736.03 over 630 frames.
+PN00M03U039 panj chhe chaar panj chhe chhe satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U040, best cost 37.6194 + 1688.81 = 1726.43 over 630 frames.
+PN00M03U040 satt athth chhe satt ikk do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U041, best cost 35.7569 + 1815.83 = 1851.58 over 629 frames.
+PN00M03U041 sifar naun sifar ikk do tinn chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U042, best cost 35.5384 + 1719.75 = 1755.28 over 630 frames.
+PN00M03U042 chaar panj chhe satt athth naun athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U043, best cost 35.0215 + 1809.92 = 1844.94 over 629 frames.
+PN00M03U043 athth sifar do chaar chhe athth satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U044, best cost 35.2366 + 1703.03 = 1738.26 over 629 frames.
+PN00M03U044 satt sifar tinn panj satt naun chhe 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U045, best cost 35.2908 + 1746.11 = 1781.4 over 630 frames.
+PN00M03U045 chhe sifar chaar satt panj sifar panj 
+LOG (lattice-scale[5.3]:main():lattice-scale.cc:90) Done 320 lattices.
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U046, best cost 36.1005 + 1644.09 = 1680.19 over 629 frames.
+PN00M03U046 panj athth chaar sifar chhe naun tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U047, best cost 37.644 + 1724.65 = 1762.3 over 630 frames.
+PN00M03U047 tinn sifar satt do sifar athth ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U048, best cost 36.9061 + 1712.32 = 1749.22 over 630 frames.
+PN00M03U048 ikk sifar sifar ikk naun ikk tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U049, best cost 34.1506 + 1685.84 = 1719.99 over 630 frames.
+PN00M03U049 tinn chhe ikk chaar athth do panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U050, best cost 34.3283 + 1639.13 = 1673.46 over 630 frames.
+PN00M03U050 panj naun do chhe panj ikk panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U051, best cost 33.4736 + 1625.29 = 1658.76 over 629 frames.
+PN00M03U051 panj chaar ikk chhe tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U052, best cost 35.1097 + 1701.65 = 1736.76 over 632 frames.
+PN00M03U052 satt ikk athth tinn satt tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U053, best cost 32.6054 + 1739.81 = 1772.42 over 653 frames.
+PN00M03U053 athth naun naun chaar naun panj do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U054, best cost 35.4878 + 1766.16 = 1801.65 over 651 frames.
+PN00M03U054 do satt chhe do athth panj tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U055, best cost 35.485 + 1710.78 = 1746.27 over 654 frames.
+PN00M03U055 tinn naun satt chaar do ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U056, best cost 37.4221 + 1669.05 = 1706.47 over 629 frames.
+PN00M03U056 ikk do naun sifar ikk do do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U057, best cost 39.6385 + 1851.95 = 1891.59 over 623 frames.
+PN00M03U057 do tinn do tinn tinn chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U058, best cost 37.2483 + 1740.53 = 1777.78 over 622 frames.
+PN00M03U058 tinn chaar chaar panj panj chhe chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U059, best cost 40.8701 + 1884.06 = 1924.93 over 625 frames.
+PN00M03U059 athth athth athth sifar sifar sifar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U060, best cost 35.534 + 1820.12 = 1855.65 over 628 frames.
+PN00M03U060 athth chhe satt athth athth naun sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U061, best cost 33.0456 + 1781.67 = 1814.72 over 629 frames.
+PN00M03U061 sifar naun naun athth satt chhe panj 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U062, best cost 33.9552 + 1772.07 = 1806.03 over 630 frames.
+PN00M03U062 panj chaar tinn do ikk sifar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U063, best cost 32.0082 + 1721.46 = 1753.47 over 629 frames.
+PN00M03U063 athth naun satt panj tinn ikk satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U064, best cost 33.8764 + 1838.86 = 1872.73 over 629 frames.
+PN00M03U064 satt naun chhe chaar do sifar chhe 
+LOG (lattice-add-penalty[5.3]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 320 lattices.
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U065, best cost 34.9471 + 1712.57 = 1747.52 over 629 frames.
+PN00M03U065 chhe naun panj do panj naun chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U066, best cost 35.6331 + 1710.91 = 1746.54 over 630 frames.
+PN00M03U066 chaar ikk chaar naun tinn sifar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U067, best cost 35.4193 + 1675.97 = 1711.39 over 627 frames.
+PN00M03U067 tinn naun do do naun ikk ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U068, best cost 39.3877 + 1935.49 = 1974.87 over 630 frames.
+PN00M03U068 ikk naun sifar sifar satt chaar sifar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U069, best cost 33.7294 + 1797.75 = 1831.48 over 629 frames.
+PN00M03U069 sifar ikk athth chhe tinn athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U070, best cost 33.6001 + 1801.36 = 1834.96 over 630 frames.
+PN00M03U070 athth panj ikk chhe do chhe athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U071, best cost 38.7729 + 1730.87 = 1769.65 over 630 frames.
+PN00M03U071 athth chaar panj athth tinn chaar athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U072, best cost 34.5994 + 1750.67 = 1785.27 over 629 frames.
+PN00M03U072 athth do tinn satt tinn chhe ikk 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U073, best cost 37.0574 + 1744.43 = 1781.49 over 630 frames.
+PN00M03U073 ikk panj sifar panj chhe satt do 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U074, best cost 38.4572 + 1749.51 = 1787.96 over 630 frames.
+PN00M03U074 do athth ikk tinn panj panj satt 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U075, best cost 35.569 + 1915.84 = 1951.41 over 630 frames.
+PN00M03U075 satt ikk do satt sifar do chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U076, best cost 35.9556 + 1775.78 = 1811.74 over 620 frames.
+PN00M03U076 chaar satt athth sifar ikk do tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U077, best cost 37.6908 + 1779.08 = 1816.77 over 624 frames.
+PN00M03U077 tinn tinn chaar chhe sifar chaar chaar 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U078, best cost 35.6692 + 1870.77 = 1906.44 over 627 frames.
+PN00M03U078 chaar panj chhe chhe satt satt athth 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U079, best cost 35.1069 + 1769.94 = 1805.05 over 629 frames.
+PN00M03U079 naun naun ikk tinn panj satt naun 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:99) For utterance PN00M03U080, best cost 38.1988 + 1745.74 = 1783.93 over 629 frames.
+PN00M03U080 do chhe naun ikk do chaar tinn 
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:124) Overall cost per frame is 2.8825 = 0.0593708 [graph] + 2.82313 [acoustic] over 201866 frames.
+LOG (lattice-best-path[5.3]:main():lattice-best-path.cc:128) Done 320 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Tue Dec 18 10:00:28 IST 2018, elapsed time 0 seconds

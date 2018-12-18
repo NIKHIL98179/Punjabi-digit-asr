@@ -1,0 +1,7 @@
+# compile-train-graphs --read-disambig-syms=data/lang_bigram/phones/disambig.int exp/tri3/tree exp/tri3/1.mdl data/lang_bigram/L.fst "ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang_bigram/words.txt < data/train/split4/1/text |" "ark:|gzip -c >exp/tri3/fsts.1.gz" 
+# Started at Tue Dec 18 10:00:52 IST 2018
+#
+compile-train-graphs --read-disambig-syms=data/lang_bigram/phones/disambig.int exp/tri3/tree exp/tri3/1.mdl data/lang_bigram/L.fst 'ark:utils/sym2int.pl --map-oov 1 -f 2- data/lang_bigram/words.txt < data/train/split4/1/text |' 'ark:|gzip -c >exp/tri3/fsts.1.gz' 
+LOG (compile-train-graphs[5.3]:main():compile-train-graphs.cc:147) compile-train-graphs: succeeded for 80 graphs, failed for 0
+# Accounting: time=1 threads=1
+# Ended (code 0) at Tue Dec 18 10:00:53 IST 2018, elapsed time 1 seconds

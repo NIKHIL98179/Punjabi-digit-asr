@@ -1,0 +1,178 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --determinize-lattice=false --allow-partial=true --word-symbol-table=exp/tri4/graph/words.txt exp/tri4/final.mdl exp/tri4/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/1/utt2spk scp:data/test/split4/1/cmvn.scp scp:data/test/split4/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/1/utt2spk ark:exp/tri4/decode/pre_trans.1 ark:- ark:- |" "ark:|gzip -c > exp/tri4/decode/lat.tmp.1.gz" 
+# Started at Tue Dec 18 10:23:58 IST 2018
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --determinize-lattice=false --allow-partial=true --word-symbol-table=exp/tri4/graph/words.txt exp/tri4/final.mdl exp/tri4/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/1/utt2spk scp:data/test/split4/1/cmvn.scp scp:data/test/split4/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/1/utt2spk ark:exp/tri4/decode/pre_trans.1 ark:- ark:- |' 'ark:|gzip -c > exp/tri4/decode/lat.tmp.1.gz' 
+transform-feats --utt2spk=ark:data/test/split4/1/utt2spk ark:exp/tri4/decode/pre_trans.1 ark:- ark:- 
+splice-feats ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split4/1/utt2spk scp:data/test/split4/1/cmvn.scp scp:data/test/split4/1/feats.scp ark:- 
+transform-feats exp/tri4/final.mat ark:- ark:- 
+PN00F02U001 sifar sifar naun athth satt chhe panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U001 is -3.57968 over 630 frames.
+PN00F02U002 panj chaar tinn do ikk sifar ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U002 is -3.12026 over 656 frames.
+PN00F02U003 ikk naun satt panj tinn ikk do 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U003 is -3.12507 over 630 frames.
+PN00F02U004 do naun chhe chaar do sifar tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U004 is -3.12348 over 629 frames.
+PN00F02U005 tinn naun panj do chaar naun chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U005 is -2.96063 over 628 frames.
+PN00F02U006 chaar ikk panj naun tinn sifar chhe 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U006 is -3.18722 over 629 frames.
+PN00F02U007 chhe naun do satt naun ikk athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U007 is -3.11846 over 630 frames.
+PN00F02U008 athth naun sifar athth chhe tinn chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U008 is -3.1532 over 629 frames.
+PN00F02U009 chaar sifar satt chaar athth panj ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U009 is -3.30284 over 626 frames.
+PN00F02U010 ikk satt tinn tinn athth chaar chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U010 is -3.23331 over 628 frames.
+PN00F02U011 chhe satt do panj athth tinn chhe 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U011 is -3.2544 over 630 frames.
+PN00F02U012 chhe athth do athth ikk chhe do 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U012 is -2.94091 over 656 frames.
+PN00F02U013 do chhe ikk do tinn satt ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U013 is -3.04591 over 630 frames.
+PN00F02U014 ikk chaar chhe sifar chaar panj sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U014 is -3.43627 over 629 frames.
+PN00F02U015 sifar panj satt sifar do do tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U015 is -3.39722 over 630 frames.
+PN00F02U016 tinn panj chhe satt athth sifar ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U016 is -3.27433 over 629 frames.
+PN00F02U017 ikk tinn chaar panj panj chhe chhe 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U017 is -3.22938 over 657 frames.
+PN00F02U018 chhe satt satt athth athth naun naun 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U018 is -3.10853 over 652 frames.
+PN00F02U019 naun sifar ikk ikk do ikk satt 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U019 is -3.10445 over 653 frames.
+PN00F02U020 satt naun ikk tinn panj satt naun 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U020 is -3.03769 over 628 frames.
+PN00F02U021 sifar sifar sifar ikk tinn chaar panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U021 is -3.82179 over 629 frames.
+PN00F02U022 panj chhe satt athth naun ikk sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U022 is -3.06451 over 656 frames.
+PN00F02U023 sifar do chaar chhe athth do sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U023 is -3.10989 over 630 frames.
+PN00F02U024 sifar tinn panj satt naun tinn sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U024 is -3.35135 over 630 frames.
+PN00F02U025 sifar chaar satt chaar sifar panj athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U025 is -3.37829 over 630 frames.
+PN00F02U026 athth panj sifar chhe naun chhe sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U026 is -3.43729 over 630 frames.
+PN00F02U027 sifar satt satt sifar athth athth sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U027 is -3.20143 over 656 frames.
+PN00F02U028 sifar naun naun sifar ikk ikk tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U028 is -3.31356 over 629 frames.
+PN00F02U029 tinn chhe ikk chaar athth ikk panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U029 is -3.22941 over 630 frames.
+PN00F02U030 panj naun do panj chaar ikk chhe 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U030 is -3.22068 over 630 frames.
+PN00F02U031 chhe panj ikk satt chhe do chhe 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U031 is -3.26581 over 630 frames.
+PN00F02U032 chhe tinn satt ikk athth tinn athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U032 is -3.0367 over 629 frames.
+PN00F02U033 athth naun chaar naun panj do ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U033 is -3.13915 over 630 frames.
+PN00F02U034 ikk naun satt do satt panj tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U034 is -3.17651 over 630 frames.
+PN00F02U035 tinn naun athth satt tinn ikk do 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U035 is -3.16969 over 630 frames.
+PN00F02U036 do do athth chaar do naun sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U036 is -3.31634 over 630 frames.
+PN00F02U037 sifar ikk do tinn do tinn tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U037 is -2.99857 over 655 frames.
+PN00F02U038 tinn chaar tinn chaar chaar panj panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U038 is -3.06329 over 630 frames.
+PN00F02U039 panj chhe chaar panj chhe chhe satt 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U039 is -3.1436 over 629 frames.
+PN00F02U040 satt athth chhe satt ikk do chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U040 is -2.97304 over 629 frames.
+PN00F02U041 sifar naun sifar ikk do tinn chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U041 is -3.29477 over 630 frames.
+PN00F02U042 chaar panj chhe satt athth naun athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U042 is -3.15885 over 648 frames.
+PN00F02U043 athth sifar do chaar chhe athth satt 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U043 is -3.18759 over 630 frames.
+PN00F02U044 satt sifar tinn panj satt naun chhe 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U044 is -3.02922 over 630 frames.
+PN00F02U045 chhe sifar chaar satt panj sifar panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U045 is -3.31422 over 630 frames.
+PN00F02U046 panj athth chaar sifar chhe naun tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U046 is -3.04249 over 630 frames.
+PN00F02U047 tinn sifar satt do sifar athth ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U047 is -3.13431 over 630 frames.
+PN00F02U048 ikk sifar sifar ikk naun ikk tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U048 is -3.07852 over 630 frames.
+PN00F02U049 tinn chhe ikk chaar athth do panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U049 is -3.12421 over 630 frames.
+PN00F02U050 panj naun do chhe panj ikk panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U050 is -3.05903 over 629 frames.
+PN00F02U051 panj chaar ikk chhe tinn ikk satt 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U051 is -3.05391 over 630 frames.
+PN00F02U052 satt ikk athth tinn satt tinn athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U052 is -3.0528 over 629 frames.
+PN00F02U053 athth naun naun chaar naun panj do 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U053 is -2.9553 over 630 frames.
+PN00F02U054 do satt chhe do athth panj tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U054 is -3.16033 over 630 frames.
+PN00F02U055 tinn naun satt chaar do ikk ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U055 is -3.12619 over 630 frames.
+PN00F02U056 ikk do naun sifar ikk do do 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U056 is -3.0147 over 656 frames.
+PN00F02U057 do tinn do tinn tinn chaar tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U057 is -2.95086 over 629 frames.
+PN00F02U058 tinn chaar chaar panj panj chhe chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U058 is -3.18773 over 630 frames.
+PN00F02U059 athth athth athth sifar sifar sifar sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U059 is -3.30058 over 629 frames.
+PN00F02U060 athth chhe satt athth athth naun sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U060 is -3.12925 over 629 frames.
+PN00F02U061 sifar naun naun athth satt chhe panj 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U061 is -3.27491 over 630 frames.
+PN00F02U062 panj chaar tinn do ikk sifar athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U062 is -3.06155 over 630 frames.
+PN00F02U063 athth naun satt panj tinn ikk satt 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U063 is -3.0016 over 629 frames.
+PN00F02U064 satt naun chhe chaar do sifar chhe 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U064 is -3.092 over 630 frames.
+PN00F02U065 chhe naun panj do panj naun chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U065 is -2.96293 over 630 frames.
+PN00F02U066 chaar ikk chaar naun tinn sifar tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U066 is -3.03051 over 630 frames.
+PN00F02U067 tinn naun do do naun ikk ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U067 is -2.93002 over 630 frames.
+PN00F02U068 ikk naun sifar sifar satt chaar sifar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U068 is -3.33966 over 629 frames.
+PN00F02U069 sifar ikk athth chhe tinn athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U069 is -3.22574 over 630 frames.
+PN00F02U070 athth panj ikk chhe do chhe athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U070 is -3.03587 over 656 frames.
+PN00F02U071 athth chaar panj athth tinn chaar athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U071 is -3.11077 over 630 frames.
+PN00F02U072 athth do tinn satt tinn chhe ikk 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U072 is -3.03501 over 630 frames.
+PN00F02U073 ikk panj sifar panj chhe satt do 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U073 is -3.08609 over 630 frames.
+PN00F02U074 do athth ikk tinn panj panj satt 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U074 is -3.06919 over 630 frames.
+LOG (apply-cmvn[5.3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 80 utterances, errors on 0
+PN00F02U075 satt ikk do satt sifar do chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U075 is -3.05995 over 630 frames.
+PN00F02U076 chaar satt athth sifar ikk do tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U076 is -3.16043 over 629 frames.
+PN00F02U077 tinn tinn chaar chhe sifar chaar chaar 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U077 is -3.10627 over 630 frames.
+PN00F02U078 chaar panj chhe chhe satt satt athth 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U078 is -3.00157 over 629 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -54.2093 over 50640 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+PN00F02U079 naun naun ikk tinn panj satt naun 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U079 is -2.94971 over 629 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average logdet is 5.08947 over 50640 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+PN00F02U080 do chhe naun ikk do chaar tinn 
+LOG (gmm-latgen-faster[5.3]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:286) Log-like per frame for utterance PN00F02U080 is -3.19145 over 629 frames.
+LOG (gmm-latgen-faster[5.3]:main():gmm-latgen-faster.cc:176) Time taken 65.3231s: real-time factor assuming 100 frames/sec is 0.128995
+LOG (gmm-latgen-faster[5.3]:main():gmm-latgen-faster.cc:179) Done 80 utterances, failed for 0
+LOG (gmm-latgen-faster[5.3]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -3.15244 over 50640 frames.
+# Accounting: time=66 threads=1
+# Ended (code 0) at Tue Dec 18 10:25:04 IST 2018, elapsed time 66 seconds

@@ -1,0 +1,19 @@
+# gmm-rescore-lattice exp/tri4/final.mdl "ark:gunzip -c exp/tri4/decode/lat.tmp.3.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/3/utt2spk scp:data/test/split4/3/cmvn.scp scp:data/test/split4/3/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/3/utt2spk ark:exp/tri4/decode/trans.3 ark:- ark:- |" ark:- | lattice-determinize-pruned --acoustic-scale=0.083333 --beam=6.0 ark:- "ark:|gzip -c > exp/tri4/decode/lat.3.gz" && rm exp/tri4/decode/lat.tmp.3.gz 
+# Started at Tue Dec 18 10:25:39 IST 2018
+#
+lattice-determinize-pruned --acoustic-scale=0.083333 --beam=6.0 ark:- 'ark:|gzip -c > exp/tri4/decode/lat.3.gz' 
+gmm-rescore-lattice exp/tri4/final.mdl 'ark:gunzip -c exp/tri4/decode/lat.tmp.3.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/3/utt2spk scp:data/test/split4/3/cmvn.scp scp:data/test/split4/3/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/3/utt2spk ark:exp/tri4/decode/trans.3 ark:- ark:- |' ark:- 
+transform-feats --utt2spk=ark:data/test/split4/3/utt2spk ark:exp/tri4/decode/trans.3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split4/3/utt2spk scp:data/test/split4/3/cmvn.scp scp:data/test/split4/3/feats.scp ark:- 
+splice-feats ark:- ark:- 
+transform-feats exp/tri4/final.mat ark:- ark:- 
+LOG (apply-cmvn[5.3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 80 utterances, errors on 0
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -54.2093 over 50435 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average logdet is 3.91235 over 50435 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (gmm-rescore-lattice[5.3]:main():gmm-rescore-lattice.cc:103) Done 80 lattices with errors on 0, #frames is 50435
+LOG (lattice-determinize-pruned[5.3]:main():lattice-determinize-pruned.cc:130) Average input-lattice depth (measured at at state level) is 2.76851, output depth is 1.0113, over 50435 frames  (average num-frames = 630.438).
+LOG (lattice-determinize-pruned[5.3]:main():lattice-determinize-pruned.cc:135) Done 80 lattices, determinization finished earlier than specified by the beam (or output was empty) on 0 of these.
+# Accounting: time=13 threads=1
+# Ended (code 0) at Tue Dec 18 10:25:52 IST 2018, elapsed time 13 seconds

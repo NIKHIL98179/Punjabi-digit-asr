@@ -1,0 +1,23 @@
+# ali-to-post "ark:gunzip -c exp/tri4/ali.4.gz|" ark:- | weight-silence-post 0.0 1:2:3:4:5 exp/tri4/2.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split4/4/spk2utt exp/tri4/2.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri4/trans.4 ark:- ark:- |" ark:- ark:exp/tri4/tmp_trans.4 
+# Started at Tue Dec 18 10:11:19 IST 2018
+#
+weight-silence-post 0.0 1:2:3:4:5 exp/tri4/2.mdl ark:- ark:- 
+gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split4/4/spk2utt exp/tri4/2.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri4/trans.4 ark:- ark:- |' ark:- ark:exp/tri4/tmp_trans.4 
+ali-to-post 'ark:gunzip -c exp/tri4/ali.4.gz|' ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- 
+transform-feats --utt2spk=ark:data/train/split4/4/utt2spk ark,s,cs:exp/tri4/trans.4 ark:- ark:- 
+splice-feats ark:- ark:- 
+transform-feats exp/tri3/final.mat ark:- ark:- 
+LOG (ali-to-post[5.3]:main():ali-to-post.cc:73) Converted 80 alignments.
+LOG (weight-silence-post[5.3]:main():weight-silence-post.cc:95) Done 80 posteriors.
+LOG (apply-cmvn[5.3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 80 utterances, errors on 0
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -54.2093 over 50402 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average logdet is 0.579599 over 50402 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (gmm-est-fmllr[5.3]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 2.68729 per frame over 20933 frames.
+LOG (gmm-est-fmllr[5.3]:main():gmm-est-fmllr.cc:143) For speaker PN00M03, auxf-impr from fMLLR is 2.68729, over 20933 frames.
+LOG (gmm-est-fmllr[5.3]:main():gmm-est-fmllr.cc:188) Done 80 files, 0 with no posts, 0 with other errors.
+LOG (gmm-est-fmllr[5.3]:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 2.68729 over 20933 frames.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Tue Dec 18 10:11:20 IST 2018, elapsed time 1 seconds

@@ -1,0 +1,18 @@
+# sgmm2-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 "--gselect=ark,s,cs:gunzip -c exp/sgmm/gselect.2.gz|" --utt2spk=ark:data/train/split4/2/utt2spk --beam=8 --retry-beam=40 exp/sgmm/5.mdl "ark:gunzip -c exp/sgmm/fsts.2.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/2/utt2spk scp:data/train/split4/2/cmvn.scp scp:data/train/split4/2/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/2/utt2spk ark,s,cs:exp/tri4_ali/trans.2 ark:- ark:- |" "ark:|gzip -c >exp/sgmm/ali.2.gz" 
+# Started at Tue Dec 18 10:46:19 IST 2018
+#
+sgmm2-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 '--gselect=ark,s,cs:gunzip -c exp/sgmm/gselect.2.gz|' --utt2spk=ark:data/train/split4/2/utt2spk --beam=8 --retry-beam=40 exp/sgmm/5.mdl 'ark:gunzip -c exp/sgmm/fsts.2.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/2/utt2spk scp:data/train/split4/2/cmvn.scp scp:data/train/split4/2/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split4/2/utt2spk ark,s,cs:exp/tri4_ali/trans.2 ark:- ark:- |' 'ark:|gzip -c >exp/sgmm/ali.2.gz' 
+transform-feats exp/tri4_ali/final.mat ark:- ark:- 
+transform-feats --utt2spk=ark:data/train/split4/2/utt2spk ark,s,cs:exp/tri4_ali/trans.2 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/2/utt2spk scp:data/train/split4/2/cmvn.scp scp:data/train/split4/2/feats.scp ark:- 
+splice-feats ark:- ark:- 
+LOG (apply-cmvn[5.3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 80 utterances, errors on 0
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -54.2093 over 50389 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average logdet is 4.00095 over 50389 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (sgmm2-align-compiled[5.3]:main():sgmm2-align-compiled.cc:173) Overall log-likelihood per frame is -34.0033 over 50389 frames.
+LOG (sgmm2-align-compiled[5.3]:main():sgmm2-align-compiled.cc:175) Retried 0 out of 80 utterances.
+LOG (sgmm2-align-compiled[5.3]:main():sgmm2-align-compiled.cc:177) Done 80, errors on 0
+# Accounting: time=190 threads=1
+# Ended (code 0) at Tue Dec 18 10:49:29 IST 2018, elapsed time 190 seconds

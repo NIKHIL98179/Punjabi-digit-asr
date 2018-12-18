@@ -1,0 +1,135 @@
+# gunzip -c exp/sgmm/decode/pre_lat.4.gz | lattice-prune --acoustic-scale=0.1 --beam=4.0 ark:- ark:- | lattice-determinize-pruned --acoustic-scale=0.1 --beam=4.0 ark:- ark:- | lattice-to-post --acoustic-scale=0.1 ark:- ark:- | weight-silence-post 0.0 1:2:3:4:5 exp/sgmm/final.alimdl ark:- ark:- | sgmm2-post-to-gpost "--gselect=ark,s,cs:gunzip -c exp/sgmm/decode/gselect.4.gz|" exp/sgmm/final.alimdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/4/utt2spk scp:data/test/split4/4/cmvn.scp scp:data/test/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/sgmm/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/4/utt2spk ark,s,cs:exp/tri4/decode/trans.4 ark:- ark:- |" ark:- ark:- | sgmm2-est-spkvecs-gpost --spk2utt=ark:data/test/split4/4/spk2utt exp/sgmm/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/4/utt2spk scp:data/test/split4/4/cmvn.scp scp:data/test/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/sgmm/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/4/utt2spk ark,s,cs:exp/tri4/decode/trans.4 ark:- ark:- |" ark,s,cs:- ark:exp/sgmm/decode/pre_vecs.4 
+# Started at Tue Dec 18 12:08:11 IST 2018
+#
+lattice-determinize-pruned --acoustic-scale=0.1 --beam=4.0 ark:- ark:- 
+lattice-to-post --acoustic-scale=0.1 ark:- ark:- 
+sgmm2-post-to-gpost '--gselect=ark,s,cs:gunzip -c exp/sgmm/decode/gselect.4.gz|' exp/sgmm/final.alimdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/4/utt2spk scp:data/test/split4/4/cmvn.scp scp:data/test/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/sgmm/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/4/utt2spk ark,s,cs:exp/tri4/decode/trans.4 ark:- ark:- |' ark:- ark:- 
+weight-silence-post 0.0 1:2:3:4:5 exp/sgmm/final.alimdl ark:- ark:- 
+lattice-prune --acoustic-scale=0.1 --beam=4.0 ark:- ark:- 
+sgmm2-est-spkvecs-gpost --spk2utt=ark:data/test/split4/4/spk2utt exp/sgmm/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split4/4/utt2spk scp:data/test/split4/4/cmvn.scp scp:data/test/split4/4/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/sgmm/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split4/4/utt2spk ark,s,cs:exp/tri4/decode/trans.4 ark:- ark:- |' ark,s,cs:- ark:exp/sgmm/decode/pre_vecs.4 
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U001, pruned #states from 339 to 309 and #arcs from 554 to 442
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U002, pruned #states from 300 to 280 and #arcs from 473 to 378
+transform-feats --utt2spk=ark:data/test/split4/4/utt2spk ark,s,cs:exp/tri4/decode/trans.4 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split4/4/utt2spk scp:data/test/split4/4/cmvn.scp scp:data/test/split4/4/feats.scp ark:- 
+transform-feats exp/sgmm/final.mat ark:- ark:- 
+splice-feats ark:- ark:- 
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U003, pruned #states from 311 to 289 and #arcs from 496 to 391
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U004, pruned #states from 351 to 333 and #arcs from 566 to 452
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U005, pruned #states from 414 to 387 and #arcs from 688 to 558
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U006, pruned #states from 417 to 384 and #arcs from 683 to 537
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U007, pruned #states from 324 to 295 and #arcs from 522 to 402
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U008, pruned #states from 375 to 344 and #arcs from 617 to 491
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U009, pruned #states from 348 to 334 and #arcs from 574 to 470
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U010, pruned #states from 369 to 351 and #arcs from 604 to 478
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U011, pruned #states from 391 to 370 and #arcs from 635 to 516
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U012, pruned #states from 306 to 288 and #arcs from 491 to 390
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U013, pruned #states from 346 to 319 and #arcs from 557 to 443
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U014, pruned #states from 427 to 392 and #arcs from 697 to 555
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U015, pruned #states from 422 to 397 and #arcs from 688 to 560
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U016, pruned #states from 391 to 364 and #arcs from 639 to 498
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U017, pruned #states from 401 to 365 and #arcs from 661 to 519
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U018, pruned #states from 384 to 362 and #arcs from 627 to 514
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U019, pruned #states from 404 to 375 and #arcs from 667 to 528
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U020, pruned #states from 422 to 384 and #arcs from 705 to 548
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U021, pruned #states from 434 to 400 and #arcs from 705 to 550
+apply-cmvn --utt2spk=ark:data/test/split4/4/utt2spk scp:data/test/split4/4/cmvn.scp scp:data/test/split4/4/feats.scp ark:- 
+transform-feats --utt2spk=ark:data/test/split4/4/utt2spk ark,s,cs:exp/tri4/decode/trans.4 ark:- ark:- 
+transform-feats exp/sgmm/final.mat ark:- ark:- 
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U022, pruned #states from 377 to 351 and #arcs from 608 to 469
+splice-feats ark:- ark:- 
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U023, pruned #states from 408 to 363 and #arcs from 657 to 489
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U024, pruned #states from 477 to 437 and #arcs from 793 to 625
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U025, pruned #states from 433 to 407 and #arcs from 709 to 572
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U026, pruned #states from 301 to 280 and #arcs from 485 to 375
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U027, pruned #states from 402 to 384 and #arcs from 654 to 535
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U028, pruned #states from 404 to 374 and #arcs from 668 to 524
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U029, pruned #states from 345 to 314 and #arcs from 561 to 442
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U030, pruned #states from 326 to 307 and #arcs from 521 to 419
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U031, pruned #states from 360 to 327 and #arcs from 590 to 457
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U032, pruned #states from 353 to 333 and #arcs from 566 to 452
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U033, pruned #states from 424 to 390 and #arcs from 689 to 554
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U034, pruned #states from 401 to 365 and #arcs from 660 to 516
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U035, pruned #states from 404 to 374 and #arcs from 659 to 539
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U036, pruned #states from 438 to 404 and #arcs from 712 to 558
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U037, pruned #states from 453 to 412 and #arcs from 748 to 579
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U038, pruned #states from 363 to 339 and #arcs from 587 to 468
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U039, pruned #states from 412 to 376 and #arcs from 671 to 514
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U040, pruned #states from 418 to 383 and #arcs from 675 to 528
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U041, pruned #states from 429 to 401 and #arcs from 714 to 569
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U042, pruned #states from 416 to 385 and #arcs from 670 to 537
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U043, pruned #states from 350 to 325 and #arcs from 564 to 439
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U044, pruned #states from 448 to 433 and #arcs from 736 to 612
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U045, pruned #states from 402 to 367 and #arcs from 669 to 525
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.6867
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U046, pruned #states from 441 to 407 and #arcs from 738 to 582
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U047, pruned #states from 401 to 379 and #arcs from 648 to 519
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U048, pruned #states from 338 to 325 and #arcs from 556 to 462
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U049, pruned #states from 381 to 345 and #arcs from 614 to 472
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U050, pruned #states from 389 to 357 and #arcs from 643 to 496
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U051, pruned #states from 352 to 329 and #arcs from 582 to 468
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U052, pruned #states from 373 to 342 and #arcs from 615 to 475
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U053, pruned #states from 343 to 317 and #arcs from 553 to 438
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U054, pruned #states from 340 to 317 and #arcs from 542 to 434
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U055, pruned #states from 416 to 396 and #arcs from 682 to 570
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.1419
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U056, pruned #states from 425 to 388 and #arcs from 692 to 524
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U057, pruned #states from 438 to 406 and #arcs from 719 to 565
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U058, pruned #states from 416 to 386 and #arcs from 674 to 523
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U059, pruned #states from 480 to 444 and #arcs from 779 to 626
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U060, pruned #states from 424 to 390 and #arcs from 690 to 542
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U061, pruned #states from 278 to 263 and #arcs from 444 to 367
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U062, pruned #states from 390 to 357 and #arcs from 636 to 488
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U063, pruned #states from 316 to 290 and #arcs from 514 to 405
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U064, pruned #states from 368 to 327 and #arcs from 589 to 439
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U065, pruned #states from 431 to 409 and #arcs from 710 to 579
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.4371
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U066, pruned #states from 440 to 407 and #arcs from 731 to 576
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U067, pruned #states from 409 to 383 and #arcs from 663 to 532
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U068, pruned #states from 432 to 417 and #arcs from 706 to 577
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U069, pruned #states from 309 to 276 and #arcs from 500 to 374
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U070, pruned #states from 349 to 316 and #arcs from 564 to 438
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U071, pruned #states from 413 to 380 and #arcs from 664 to 529
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U072, pruned #states from 342 to 299 and #arcs from 549 to 407
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U073, pruned #states from 415 to 396 and #arcs from 662 to 544
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U074, pruned #states from 392 to 366 and #arcs from 623 to 493
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U075, pruned #states from 369 to 332 and #arcs from 581 to 441
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.3155
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U076, pruned #states from 406 to 372 and #arcs from 655 to 515
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U077, pruned #states from 425 to 393 and #arcs from 683 to 535
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U078, pruned #states from 350 to 320 and #arcs from 559 to 425
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U079, pruned #states from 338 to 318 and #arcs from 551 to 437
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:95) For utterance PN00M03U080, pruned #states from 364 to 335 and #arcs from 582 to 459
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:104) Overall, pruned from on average 386.413 to 357.962 states, and from 628.85 to 497.163 arcs, over 80 utterances.
+LOG (lattice-prune[5.3]:main():lattice-prune.cc:108) Done 80 lattices.
+LOG (lattice-determinize-pruned[5.3]:main():lattice-determinize-pruned.cc:130) Average input-lattice depth (measured at at state level) is 1.80574, output depth is 1, over 50402 frames  (average num-frames = 630.025).
+LOG (lattice-determinize-pruned[5.3]:main():lattice-determinize-pruned.cc:135) Done 80 lattices, determinization finished earlier than specified by the beam (or output was empty) on 0 of these.
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.3782
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.3214
+LOG (lattice-to-post[5.3]:main():lattice-to-post.cc:106) Overall average log-like/frame is -3.05027 over 50402 frames.  Average acoustic like/frame is -2.99303
+LOG (lattice-to-post[5.3]:main():lattice-to-post.cc:110) Done 80 lattices.
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.3532
+LOG (weight-silence-post[5.3]:main():weight-silence-post.cc:95) Done 80 posteriors.
+LOG (apply-cmvn[5.3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 80 utterances, errors on 0
+LOG (apply-cmvn[5.3]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 80 utterances, errors on 0
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -54.2093 over 50402 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -54.2093 over 50402 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average logdet is 4.98014 over 50402 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:168) Avg like per frame so far is -15.432
+LOG (transform-feats[5.3]:main():transform-feats.cc:158) Overall average logdet is 4.98014 over 50402 frames.
+LOG (transform-feats[5.3]:main():transform-feats.cc:161) Applied transform to 80 utterances; 0 had errors.
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:173) Overall like per frame (Gaussian only) = -15.432 over 50402 frames.
+LOG (sgmm2-post-to-gpost[5.3]:main():sgmm2-post-to-gpost.cc:176) Done 80 files, 0 with errors.
+LOG (sgmm2-est-spkvecs-gpost[5.3]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v_s: floored 28 eigenvalues. 
+LOG (sgmm2-est-spkvecs-gpost[5.3]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v_s: floored 28 eigenvalues. 
+LOG (sgmm2-est-spkvecs-gpost[5.3]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v_s: floored 28 eigenvalues. 
+LOG (sgmm2-est-spkvecs-gpost[5.3]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v_s: floored 28 eigenvalues. 
+LOG (sgmm2-est-spkvecs-gpost[5.3]:SolveQuadraticProblem<double>():sp-matrix.cc:686) Solving quadratic problem for v_s: floored 28 eigenvalues. 
+LOG (sgmm2-est-spkvecs-gpost[5.3]:UpdateWithU():estimate-am-sgmm2.cc:1937) *Objf impr for speaker vector is 10.6757 per frame, over 21148 frames.
+LOG (sgmm2-est-spkvecs-gpost[5.3]:main():sgmm2-est-spkvecs-gpost.cc:158) For speaker PN00M03, auxf-impr from speaker vector is 10.6757, over 21148 frames.
+LOG (sgmm2-est-spkvecs-gpost[5.3]:main():sgmm2-est-spkvecs-gpost.cc:208) Done 80 files, 0 with errors.
+LOG (sgmm2-est-spkvecs-gpost[5.3]:main():sgmm2-est-spkvecs-gpost.cc:210) Overall auxf impr per frame is 10.6757 over 21148 frames.
+# Accounting: time=9 threads=1
+# Ended (code 0) at Tue Dec 18 12:08:20 IST 2018, elapsed time 9 seconds
